@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Selenium API PY 文档 - selenium.webdriver.firefox.webdriver</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../../../..\../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../../../..\../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../../../..\../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../../../..\../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../../../..\../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="../ie/webdriver.html" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li><li class="chapter" data-level="1.1" data-path="../../../../index.html">
+    <a href="../../../../index.html"><b>1.1.</b> 介绍</a>
+</li>
+<li class="header">Common</li><li class="chapter" data-level="2.1" data-path="../../common/exceptions.html">
+    <a href="../../common/exceptions.html"><b>2.1.</b> selenium.common.exceptions</a>
+</li>
+<li class="header">Webdriver.common</li><li class="chapter" data-level="3.1" data-path="../common/action_chains.html">
+    <a href="../common/action_chains.html"><b>3.1.</b> selenium.webdriver.common.action_chains</a>
+</li>
+<li class="chapter" data-level="3.2" data-path="../common/alert.html">
+    <a href="../common/alert.html"><b>3.2.</b> selenium.webdriver.common.alert</a>
+</li>
+<li class="chapter" data-level="3.3" data-path="../common/by.html">
+    <a href="../common/by.html"><b>3.3.</b> selenium.webdriver.common.by</a>
+</li>
+<li class="chapter" data-level="3.4" data-path="../common/desired_capabilities.html">
+    <a href="../common/desired_capabilities.html"><b>3.4.</b> selenium.webdriver.common.desired_capabilities</a>
+</li>
+<li class="chapter" data-level="3.5" data-path="../common/keys.html">
+    <a href="../common/keys.html"><b>3.5.</b> selenium.webdriver.common.keys</a>
+</li>
+<li class="chapter" data-level="3.6" data-path="../common/touch_actions.html">
+    <a href="../common/touch_actions.html"><b>3.6.</b> selenium.webdriver.common.touch_actions</a>
+</li>
+<li class="chapter" data-level="3.7" data-path="../common/utils.html">
+    <a href="../common/utils.html"><b>3.7.</b> selenium.webdriver.common.utils</a>
+</li>
+<li class="chapter" data-level="3.8" data-path="../common/proxy.html">
+    <a href="../common/proxy.html"><b>3.8.</b> selenium.webdriver.common.proxy</a>
+</li>
+<li class="chapter" data-level="3.9" data-path="../common/service.html">
+    <a href="../common/service.html"><b>3.9.</b> selenium.webdriver.common.service</a>
+</li>
+<li class="chapter" data-level="3.10" data-path="../common/html5/application_cache.html">
+    <a href="../common/html5/application_cache.html"><b>3.10.</b> selenium.webdriver.common.html5.application_cache</a>
+</li>
+<li class="header">Webdriver.support</li><li class="chapter" data-level="4.1" data-path="../support/abstract_event_listener.html">
+    <a href="../support/abstract_event_listener.html"><b>4.1.</b> selenium.webdriver.support.abstract_event_listener</a>
+</li>
+<li class="chapter" data-level="4.2" data-path="../support/color.html">
+    <a href="../support/color.html"><b>4.2.</b> selenium.webdriver.support.color</a>
+</li>
+<li class="chapter" data-level="4.3" data-path="../support/event_firing_webdriver.html">
+    <a href="../support/event_firing_webdriver.html"><b>4.3.</b> selenium.webdriver.support.event_firing_webdriver</a>
+</li>
+<li class="chapter" data-level="4.4" data-path="../support/expected_conditions.html">
+    <a href="../support/expected_conditions.html"><b>4.4.</b> selenium.webdriver.support.expected_conditions</a>
+</li>
+<li class="chapter" data-level="4.5" data-path="../support/select.html">
+    <a href="../support/select.html"><b>4.5.</b> selenium.webdriver.support.select</a>
+</li>
+<li class="chapter" data-level="4.6" data-path="../support/wait.html">
+    <a href="../support/wait.html"><b>4.6.</b> selenium.webdriver.support.wait</a>
+</li>
+<li class="header">Webdriver.android</li><li class="chapter" data-level="5.1" data-path="../android/webdriver.html">
+    <a href="../android/webdriver.html"><b>5.1.</b> selenium.webdriver.android.webdriver</a>
+</li>
+<li class="header">Webdriver.chrome</li><li class="chapter" data-level="6.1" data-path="../chrome/options.html">
+    <a href="../chrome/options.html"><b>6.1.</b> selenium.webdriver.chrome.options</a>
+</li>
+<li class="chapter" data-level="6.2" data-path="../chrome/service.html">
+    <a href="../chrome/service.html"><b>6.2.</b> selenium.webdriver.chrome.service</a>
+</li>
+<li class="chapter" data-level="6.3" data-path="../chrome/webdriver.html">
+    <a href="../chrome/webdriver.html"><b>6.3.</b> selenium.webdriver.chrome.webdriver</a>
+</li>
+<li class="header">Webdriver.firefox</li><li class="chapter" data-level="7.1" data-path="extension_connection.html">
+    <a href="extension_connection.html"><b>7.1.</b> selenium.webdriver.firefox.extension_connection</a>
+</li>
+<li class="chapter" data-level="7.2" data-path="firefox_binary.html">
+    <a href="firefox_binary.html"><b>7.2.</b> selenium.webdriver.firefox.firefox_binary</a>
+</li>
+<li class="chapter" data-level="7.3" data-path="options.html">
+    <a href="options.html"><b>7.3.</b> selenium.webdriver.firefox.options</a>
+</li>
+<li class="chapter" data-level="7.4" data-path="firefox_profile.html">
+    <a href="firefox_profile.html"><b>7.4.</b> selenium.webdriver.firefox.firefox_profile</a>
+</li>
+<li class="chapter active" data-level="7.5" data-path="webdriver.html">
+    <a href="webdriver.html"><b>7.5.</b> selenium.webdriver.firefox.webdriver</a>
+</li>
+<li class="header">Webdriver.ie</li><li class="chapter" data-level="8.1" data-path="../ie/webdriver.html">
+    <a href="../ie/webdriver.html"><b>8.1.</b> selenium.webdriver.ie.webdriver</a>
+</li>
+<li class="header">Webdriver.opera</li><li class="chapter" data-level="9.1" data-path="../opera/webdriver.html">
+    <a href="../opera/webdriver.html"><b>9.1.</b> selenium.webdriver.opera.webdriver</a>
+</li>
+<li class="header">Webdriver.phantomjs</li><li class="chapter" data-level="10.1" data-path="../phantomjs/service.html">
+    <a href="../phantomjs/service.html"><b>10.1.</b> selenium.webdriver.phantomjs.service</a>
+</li>
+<li class="chapter" data-level="10.2" data-path="../phantomjs/webdriver.html">
+    <a href="../phantomjs/webdriver.html"><b>10.2.</b> selenium.webdriver.phantomjs.webdriver</a>
+</li>
+<li class="header">Webdriver.remote</li><li class="chapter" data-level="11.1" data-path="../remote/command.html">
+    <a href="../remote/command.html"><b>11.1.</b> selenium.webdriver.remote.command</a>
+</li>
+<li class="chapter" data-level="11.2" data-path="../remote/errorhandler.html">
+    <a href="../remote/errorhandler.html"><b>11.2.</b> selenium.webdriver.remote.errorhandler</a>
+</li>
+<li class="chapter" data-level="11.3" data-path="../remote/mobile.html">
+    <a href="../remote/mobile.html"><b>11.3.</b> selenium.webdriver.remote.mobile</a>
+</li>
+<li class="chapter" data-level="11.4" data-path="../remote/remote_connection.html">
+    <a href="../remote/remote_connection.html"><b>11.4.</b> selenium.webdriver.remote.remote_connection</a>
+</li>
+<li class="chapter" data-level="11.5" data-path="../remote/utils.html">
+    <a href="../remote/utils.html"><b>11.5.</b> selenium.webdriver.remote.utils</a>
+</li>
+<li class="chapter" data-level="11.6" data-path="../remote/webdriver.html">
+    <a href="../remote/webdriver.html"><b>11.6.</b> selenium.webdriver.remote.webdriver</a>
+</li>
+<li class="chapter" data-level="11.7" data-path="../remote/webelement.html">
+    <a href="../remote/webelement.html"><b>11.7.</b> selenium.webdriver.remote.webelement</a>
+</li>
+<li class="header">Webdriver.safari</li><li class="chapter" data-level="12.1" data-path="../safari/service.html">
+    <a href="../safari/service.html"><b>12.1.</b> selenium.webdriver.safari.service</a>
+</li>
+<li class="chapter" data-level="12.2" data-path="../safari/webdriver.html">
+    <a href="../safari/webdriver.html"><b>12.2.</b> selenium.webdriver.safari.webdriver</a>
+</li>
+
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../../../..">selenium.webdriver.firefox.webdriver</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>selenium.webdriver.firefox.webdriver</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>class selenium.webdriver.firefox.webdriver.WebDriver(firefox_profile=None, firefox_binary=None, timeout=30, capabilities=None, proxy=None, executable_path='geckodriver', options=None, log_path='geckodriver.log', firefox_options=None, service_args=None, desired_capabilities=None)</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>1.1. </b>CONTEXT_CHROME = 'chrome'</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>1.2. </b>CONTEXT_CONTENT = 'content'</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>1.3. </b>NATIVE_EVENTS_ALLOWED = False</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_6'><b>1.4. </b>context(*args, **kwds)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_7'><b>1.5. </b>firefox_profile</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_8'><b>1.6. </b>install_addon(path, temporary=None)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_9'><b>1.7. </b>quit()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_10'><b>1.8. </b>set_context(context)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_11'><b>1.9. </b>uninstall_addon(identifier)</a></li></ul></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>selenium.webdriver.firefox.webdriver</h1><h2 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>1. class selenium.webdriver.firefox.webdriver.WebDriver(firefox_profile=None, firefox_binary=None, timeout=30, capabilities=None, proxy=None, executable_path='geckodriver', options=None, log_path='geckodriver.log', firefox_options=None, service_args=None, desired_capabilities=None)</h2><p>启动 Firefox 的新本地会话。</p>
+<p>基于各种关键字参数的组合和特异性，将构造一个传递给远程端的能力字典。</p>
+<p>给予此构造函数的关键字参数是帮助程序，可以更轻松地使用不同的选项自定义 Firefox WebDriver 会话。它们映射到传递到远程端的功能字典。</p>
+<p>由于某些选项（例如 firefox_profile 和  <code class="language-markup">options.profile</code>  是互斥的），因此优先级取决于设置的具体程度。 capabilities 是最不具体的关键字参数，后跟 options，后跟 firefox_binary 和 firefox_profile。</p>
+<p>实际上，这意味着如果同时设置了firefox_profile和  <code class="language-markup">options.profile</code> ，则所选的配置文件实例将始终来自最具体的变量。在这种情况下，这将是firefox_profile。这将导致  <code class="language-markup">options.profile</code> 被忽略，因为它被认为是比顶级firefox_profile 关键字参数更不具体的设置。类似地，如果你指定了一个 <code class="language-markup">["moz:firefoxOptions"]("profile")</code>  Base64字符串，这将排在 <code class="language-markup">options.profile</code> 之下。</p>
+<ul>
+<li><p>参数：</p>
+<ul>
+<li><p>firefox_profile - FirefoxProfile 对象的实例或字符串。如果未定义，将在系统上的临时位置创建新的配置文件。</p>
+</li>
+<li><p>firefox_binary - 的实例 FirefoxBinary 或完整路径 Firefox 的二进制文件。如果未定义，将使用系统默认的 Firefox 安装。</p>
+</li>
+<li><p>timeout - 使用扩展连接时等待 Firefox 启动的时间。</p>
+</li>
+<li><p>capabilities - 所需能力的词典。</p>
+</li>
+<li><p>proxy - 通过扩展连接与 Firefox 通信时的代理设置。</p>
+</li>
+<li><p>executable_path - 覆盖用于 Firefox 47.0.1 及更高版本的 geckodriver 二进制文件的完整路径，默认为从系统路径中获取二进制文件。</p>
+</li>
+<li><p>options - options.Options 的实例。</p>
+</li>
+<li><p>log_path - 从驱动程序记录信息的位置。</p>
+</li>
+<li><p>desired_capabilities - 功能的别名。在此库的未来版本中，这将取代“capabilities”。这将使签名与 RemoteWebDriver 保持一致。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. CONTEXT_CHROME = 'chrome'</h3><h3 id="anchor_4"><a name="anchor_4" class="anchor-navigation-ex-anchor" href="#anchor_4"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. CONTEXT_CONTENT = 'content'</h3><h3 id="anchor_5"><a name="anchor_5" class="anchor-navigation-ex-anchor" href="#anchor_5"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. NATIVE_EVENTS_ALLOWED = False</h3><h3 id="anchor_6"><a name="anchor_6" class="anchor-navigation-ex-anchor" href="#anchor_6"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. context(*args, **kwds)</h3><p>使用 with 语句设置 Selenium 命令运行的上下文。服务器上下文的状态在进入块之前保存，并在退出时恢复。</p>
+<ul>
+<li><p>参数：context –  Context，可以是类属性 CONTEXT_CHROME 或 CONTEXT_CONTENT 之一。</p>
+</li>
+<li><p>用法示例：</p>
+<pre class="line-numbers"><code class="lang-python">with selenium.context(selenium.CONTEXT_CHROME):
+  # chrome scope
+  ... do stuff ...
+</code></pre>
+</li>
+</ul>
+<h3 id="anchor_7"><a name="anchor_7" class="anchor-navigation-ex-anchor" href="#anchor_7"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. firefox_profile</h3><h3 id="anchor_8"><a name="anchor_8" class="anchor-navigation-ex-anchor" href="#anchor_8"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. install_addon(path, temporary=None)</h3><p>安装 Firefox 插件。</p>
+<p>返回已安装插件的标识符。此标识符以后可用于卸载插件。</p>
+<ul>
+<li><p>参数：path – 要安装的插件的绝对路径。</p>
+</li>
+<li><p>用法：</p>
+<pre class="line-numbers"><code class="lang-python">driver.install_addon(&#39;/path/to/firebug.xpi&#39;)
+</code></pre>
+</li>
+</ul>
+<h3 id="anchor_9"><a name="anchor_9" class="anchor-navigation-ex-anchor" href="#anchor_9"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. quit()</h3><p>退出驱动程序并关闭每个关联的窗口。</p>
+<h3 id="anchor_10"><a name="anchor_10" class="anchor-navigation-ex-anchor" href="#anchor_10"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. set_context(context)</h3><h3 id="anchor_11"><a name="anchor_11" class="anchor-navigation-ex-anchor" href="#anchor_11"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. uninstall_addon(identifier)</h3><p>使用其标识符卸载 Firefox 插件。</p>
+<ul>
+<li><p>用法：</p>
+<pre class="line-numbers"><code class="lang-python">driver.uninstall_addon(&#39;addon@foo.com&#39;)
+</code></pre>
+</li>
+</ul>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?921ac157b25b6c9fd562a97abf2806a7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: selenium.webdriver.firefox.firefox_profile" class="navigation navigation-prev" href="firefox_profile.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+<a aria-label="Next page: selenium.webdriver.ie.webdriver" class="navigation navigation-next" href="../ie/webdriver.html">
+    <i class="fa fa-angle-right"></i>
+</a>
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn"
+            },
+            "basePath": "../../../..",
+            "js": {'prism': ['../../../..\\../asserts/lsbook/prismjs/clipboard.min.js', '../../../..\\../asserts/lsbook/prismjs/prism.js']}
+        });
+    });
+</script>
+</div>
+
+<script src="../../../..\../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../../../..\../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../../../..\../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../../../..\../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>

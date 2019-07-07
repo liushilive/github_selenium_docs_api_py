@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Selenium API PY 文档 - selenium.webdriver.phantomjs.webdriver</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../../../..\../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../../../..\../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../../../..\../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../../../..\../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../../../..\../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="../remote/command.html" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li><li class="chapter" data-level="1.1" data-path="../../../../index.html">
+    <a href="../../../../index.html"><b>1.1.</b> 介绍</a>
+</li>
+<li class="header">Common</li><li class="chapter" data-level="2.1" data-path="../../common/exceptions.html">
+    <a href="../../common/exceptions.html"><b>2.1.</b> selenium.common.exceptions</a>
+</li>
+<li class="header">Webdriver.common</li><li class="chapter" data-level="3.1" data-path="../common/action_chains.html">
+    <a href="../common/action_chains.html"><b>3.1.</b> selenium.webdriver.common.action_chains</a>
+</li>
+<li class="chapter" data-level="3.2" data-path="../common/alert.html">
+    <a href="../common/alert.html"><b>3.2.</b> selenium.webdriver.common.alert</a>
+</li>
+<li class="chapter" data-level="3.3" data-path="../common/by.html">
+    <a href="../common/by.html"><b>3.3.</b> selenium.webdriver.common.by</a>
+</li>
+<li class="chapter" data-level="3.4" data-path="../common/desired_capabilities.html">
+    <a href="../common/desired_capabilities.html"><b>3.4.</b> selenium.webdriver.common.desired_capabilities</a>
+</li>
+<li class="chapter" data-level="3.5" data-path="../common/keys.html">
+    <a href="../common/keys.html"><b>3.5.</b> selenium.webdriver.common.keys</a>
+</li>
+<li class="chapter" data-level="3.6" data-path="../common/touch_actions.html">
+    <a href="../common/touch_actions.html"><b>3.6.</b> selenium.webdriver.common.touch_actions</a>
+</li>
+<li class="chapter" data-level="3.7" data-path="../common/utils.html">
+    <a href="../common/utils.html"><b>3.7.</b> selenium.webdriver.common.utils</a>
+</li>
+<li class="chapter" data-level="3.8" data-path="../common/proxy.html">
+    <a href="../common/proxy.html"><b>3.8.</b> selenium.webdriver.common.proxy</a>
+</li>
+<li class="chapter" data-level="3.9" data-path="../common/service.html">
+    <a href="../common/service.html"><b>3.9.</b> selenium.webdriver.common.service</a>
+</li>
+<li class="chapter" data-level="3.10" data-path="../common/html5/application_cache.html">
+    <a href="../common/html5/application_cache.html"><b>3.10.</b> selenium.webdriver.common.html5.application_cache</a>
+</li>
+<li class="header">Webdriver.support</li><li class="chapter" data-level="4.1" data-path="../support/abstract_event_listener.html">
+    <a href="../support/abstract_event_listener.html"><b>4.1.</b> selenium.webdriver.support.abstract_event_listener</a>
+</li>
+<li class="chapter" data-level="4.2" data-path="../support/color.html">
+    <a href="../support/color.html"><b>4.2.</b> selenium.webdriver.support.color</a>
+</li>
+<li class="chapter" data-level="4.3" data-path="../support/event_firing_webdriver.html">
+    <a href="../support/event_firing_webdriver.html"><b>4.3.</b> selenium.webdriver.support.event_firing_webdriver</a>
+</li>
+<li class="chapter" data-level="4.4" data-path="../support/expected_conditions.html">
+    <a href="../support/expected_conditions.html"><b>4.4.</b> selenium.webdriver.support.expected_conditions</a>
+</li>
+<li class="chapter" data-level="4.5" data-path="../support/select.html">
+    <a href="../support/select.html"><b>4.5.</b> selenium.webdriver.support.select</a>
+</li>
+<li class="chapter" data-level="4.6" data-path="../support/wait.html">
+    <a href="../support/wait.html"><b>4.6.</b> selenium.webdriver.support.wait</a>
+</li>
+<li class="header">Webdriver.android</li><li class="chapter" data-level="5.1" data-path="../android/webdriver.html">
+    <a href="../android/webdriver.html"><b>5.1.</b> selenium.webdriver.android.webdriver</a>
+</li>
+<li class="header">Webdriver.chrome</li><li class="chapter" data-level="6.1" data-path="../chrome/options.html">
+    <a href="../chrome/options.html"><b>6.1.</b> selenium.webdriver.chrome.options</a>
+</li>
+<li class="chapter" data-level="6.2" data-path="../chrome/service.html">
+    <a href="../chrome/service.html"><b>6.2.</b> selenium.webdriver.chrome.service</a>
+</li>
+<li class="chapter" data-level="6.3" data-path="../chrome/webdriver.html">
+    <a href="../chrome/webdriver.html"><b>6.3.</b> selenium.webdriver.chrome.webdriver</a>
+</li>
+<li class="header">Webdriver.firefox</li><li class="chapter" data-level="7.1" data-path="../firefox/extension_connection.html">
+    <a href="../firefox/extension_connection.html"><b>7.1.</b> selenium.webdriver.firefox.extension_connection</a>
+</li>
+<li class="chapter" data-level="7.2" data-path="../firefox/firefox_binary.html">
+    <a href="../firefox/firefox_binary.html"><b>7.2.</b> selenium.webdriver.firefox.firefox_binary</a>
+</li>
+<li class="chapter" data-level="7.3" data-path="../firefox/options.html">
+    <a href="../firefox/options.html"><b>7.3.</b> selenium.webdriver.firefox.options</a>
+</li>
+<li class="chapter" data-level="7.4" data-path="../firefox/firefox_profile.html">
+    <a href="../firefox/firefox_profile.html"><b>7.4.</b> selenium.webdriver.firefox.firefox_profile</a>
+</li>
+<li class="chapter" data-level="7.5" data-path="../firefox/webdriver.html">
+    <a href="../firefox/webdriver.html"><b>7.5.</b> selenium.webdriver.firefox.webdriver</a>
+</li>
+<li class="header">Webdriver.ie</li><li class="chapter" data-level="8.1" data-path="../ie/webdriver.html">
+    <a href="../ie/webdriver.html"><b>8.1.</b> selenium.webdriver.ie.webdriver</a>
+</li>
+<li class="header">Webdriver.opera</li><li class="chapter" data-level="9.1" data-path="../opera/webdriver.html">
+    <a href="../opera/webdriver.html"><b>9.1.</b> selenium.webdriver.opera.webdriver</a>
+</li>
+<li class="header">Webdriver.phantomjs</li><li class="chapter" data-level="10.1" data-path="service.html">
+    <a href="service.html"><b>10.1.</b> selenium.webdriver.phantomjs.service</a>
+</li>
+<li class="chapter active" data-level="10.2" data-path="webdriver.html">
+    <a href="webdriver.html"><b>10.2.</b> selenium.webdriver.phantomjs.webdriver</a>
+</li>
+<li class="header">Webdriver.remote</li><li class="chapter" data-level="11.1" data-path="../remote/command.html">
+    <a href="../remote/command.html"><b>11.1.</b> selenium.webdriver.remote.command</a>
+</li>
+<li class="chapter" data-level="11.2" data-path="../remote/errorhandler.html">
+    <a href="../remote/errorhandler.html"><b>11.2.</b> selenium.webdriver.remote.errorhandler</a>
+</li>
+<li class="chapter" data-level="11.3" data-path="../remote/mobile.html">
+    <a href="../remote/mobile.html"><b>11.3.</b> selenium.webdriver.remote.mobile</a>
+</li>
+<li class="chapter" data-level="11.4" data-path="../remote/remote_connection.html">
+    <a href="../remote/remote_connection.html"><b>11.4.</b> selenium.webdriver.remote.remote_connection</a>
+</li>
+<li class="chapter" data-level="11.5" data-path="../remote/utils.html">
+    <a href="../remote/utils.html"><b>11.5.</b> selenium.webdriver.remote.utils</a>
+</li>
+<li class="chapter" data-level="11.6" data-path="../remote/webdriver.html">
+    <a href="../remote/webdriver.html"><b>11.6.</b> selenium.webdriver.remote.webdriver</a>
+</li>
+<li class="chapter" data-level="11.7" data-path="../remote/webelement.html">
+    <a href="../remote/webelement.html"><b>11.7.</b> selenium.webdriver.remote.webelement</a>
+</li>
+<li class="header">Webdriver.safari</li><li class="chapter" data-level="12.1" data-path="../safari/service.html">
+    <a href="../safari/service.html"><b>12.1.</b> selenium.webdriver.safari.service</a>
+</li>
+<li class="chapter" data-level="12.2" data-path="../safari/webdriver.html">
+    <a href="../safari/webdriver.html"><b>12.2.</b> selenium.webdriver.safari.webdriver</a>
+</li>
+
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../../../..">selenium.webdriver.phantomjs.webdriver</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>selenium.webdriver.phantomjs.webdriver</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>class selenium.webdriver.phantomjs.webdriver.WebDriver(executable_path='phantomjs', port=0, desired_capabilities={'version': '', 'browserName': 'phantomjs', 'javascriptEnabled': True, 'platform': 'ANY'}, service_args=None, service_log_path=None)</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>1.1. </b>quit()</a></li></ul></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>selenium.webdriver.phantomjs.webdriver</h1><h2 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>1. class selenium.webdriver.phantomjs.webdriver.WebDriver(executable_path='phantomjs', port=0, desired_capabilities={'version': '', 'browserName': 'phantomjs', 'javascriptEnabled': True, 'platform': 'ANY'}, service_args=None, service_log_path=None)</h2><p>包装器通过 Ghostdriver 与 PhantomJS 通信。</p>
+<p>您需要按照此处的所有说明操作：<a href="https://github.com/detro/ghostdriver">https://github.com/detro/ghostdriver</a></p>
+<p>创建 PhantomJS / Ghostdriver 的新实例。</p>
+<p>启动该服务，然后创建驱动程序的新实例。</p>
+<ul>
+<li><p>参数：</p>
+<ul>
+<li><p>executable_path - 可执行文件的路径。如果使用默认值，则假定可执行文件位于 $ PATH 中</p>
+</li>
+<li><p>port - 您希望服务运行的端口，如果保留为 0，将找到一个空闲端口。</p>
+</li>
+<li><p>desired_capabilities：仅具有非浏览器特定功能的 Dictionary 对象，例如“proxy”或“loggingPref”。</p>
+</li>
+<li><p>service_args：传递给 PhantomJS 的命令行参数列表</p>
+</li>
+<li><p>service_log_path：要登录的 phantomjs 服务的路径。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. quit()</h3><p>关闭浏览器并关闭启动 PhantomJS 时启动的 PhantomJS 可执行文件</p>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?921ac157b25b6c9fd562a97abf2806a7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: selenium.webdriver.phantomjs.service" class="navigation navigation-prev" href="service.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+<a aria-label="Next page: selenium.webdriver.remote.command" class="navigation navigation-next" href="../remote/command.html">
+    <i class="fa fa-angle-right"></i>
+</a>
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn"
+            },
+            "basePath": "../../../..",
+            "js": {}
+        });
+    });
+</script>
+</div>
+
+<script src="../../../..\../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../../../..\../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../../../..\../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../../../..\../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>

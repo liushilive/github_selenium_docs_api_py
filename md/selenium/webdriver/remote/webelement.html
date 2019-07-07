@@ -1,0 +1,705 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Selenium API PY 文档 - selenium.webdriver.remote.webelement</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../../../..\../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../../../..\../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../../../..\../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../../../..\../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../../../..\../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="../safari/service.html" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li><li class="chapter" data-level="1.1" data-path="../../../../index.html">
+    <a href="../../../../index.html"><b>1.1.</b> 介绍</a>
+</li>
+<li class="header">Common</li><li class="chapter" data-level="2.1" data-path="../../common/exceptions.html">
+    <a href="../../common/exceptions.html"><b>2.1.</b> selenium.common.exceptions</a>
+</li>
+<li class="header">Webdriver.common</li><li class="chapter" data-level="3.1" data-path="../common/action_chains.html">
+    <a href="../common/action_chains.html"><b>3.1.</b> selenium.webdriver.common.action_chains</a>
+</li>
+<li class="chapter" data-level="3.2" data-path="../common/alert.html">
+    <a href="../common/alert.html"><b>3.2.</b> selenium.webdriver.common.alert</a>
+</li>
+<li class="chapter" data-level="3.3" data-path="../common/by.html">
+    <a href="../common/by.html"><b>3.3.</b> selenium.webdriver.common.by</a>
+</li>
+<li class="chapter" data-level="3.4" data-path="../common/desired_capabilities.html">
+    <a href="../common/desired_capabilities.html"><b>3.4.</b> selenium.webdriver.common.desired_capabilities</a>
+</li>
+<li class="chapter" data-level="3.5" data-path="../common/keys.html">
+    <a href="../common/keys.html"><b>3.5.</b> selenium.webdriver.common.keys</a>
+</li>
+<li class="chapter" data-level="3.6" data-path="../common/touch_actions.html">
+    <a href="../common/touch_actions.html"><b>3.6.</b> selenium.webdriver.common.touch_actions</a>
+</li>
+<li class="chapter" data-level="3.7" data-path="../common/utils.html">
+    <a href="../common/utils.html"><b>3.7.</b> selenium.webdriver.common.utils</a>
+</li>
+<li class="chapter" data-level="3.8" data-path="../common/proxy.html">
+    <a href="../common/proxy.html"><b>3.8.</b> selenium.webdriver.common.proxy</a>
+</li>
+<li class="chapter" data-level="3.9" data-path="../common/service.html">
+    <a href="../common/service.html"><b>3.9.</b> selenium.webdriver.common.service</a>
+</li>
+<li class="chapter" data-level="3.10" data-path="../common/html5/application_cache.html">
+    <a href="../common/html5/application_cache.html"><b>3.10.</b> selenium.webdriver.common.html5.application_cache</a>
+</li>
+<li class="header">Webdriver.support</li><li class="chapter" data-level="4.1" data-path="../support/abstract_event_listener.html">
+    <a href="../support/abstract_event_listener.html"><b>4.1.</b> selenium.webdriver.support.abstract_event_listener</a>
+</li>
+<li class="chapter" data-level="4.2" data-path="../support/color.html">
+    <a href="../support/color.html"><b>4.2.</b> selenium.webdriver.support.color</a>
+</li>
+<li class="chapter" data-level="4.3" data-path="../support/event_firing_webdriver.html">
+    <a href="../support/event_firing_webdriver.html"><b>4.3.</b> selenium.webdriver.support.event_firing_webdriver</a>
+</li>
+<li class="chapter" data-level="4.4" data-path="../support/expected_conditions.html">
+    <a href="../support/expected_conditions.html"><b>4.4.</b> selenium.webdriver.support.expected_conditions</a>
+</li>
+<li class="chapter" data-level="4.5" data-path="../support/select.html">
+    <a href="../support/select.html"><b>4.5.</b> selenium.webdriver.support.select</a>
+</li>
+<li class="chapter" data-level="4.6" data-path="../support/wait.html">
+    <a href="../support/wait.html"><b>4.6.</b> selenium.webdriver.support.wait</a>
+</li>
+<li class="header">Webdriver.android</li><li class="chapter" data-level="5.1" data-path="../android/webdriver.html">
+    <a href="../android/webdriver.html"><b>5.1.</b> selenium.webdriver.android.webdriver</a>
+</li>
+<li class="header">Webdriver.chrome</li><li class="chapter" data-level="6.1" data-path="../chrome/options.html">
+    <a href="../chrome/options.html"><b>6.1.</b> selenium.webdriver.chrome.options</a>
+</li>
+<li class="chapter" data-level="6.2" data-path="../chrome/service.html">
+    <a href="../chrome/service.html"><b>6.2.</b> selenium.webdriver.chrome.service</a>
+</li>
+<li class="chapter" data-level="6.3" data-path="../chrome/webdriver.html">
+    <a href="../chrome/webdriver.html"><b>6.3.</b> selenium.webdriver.chrome.webdriver</a>
+</li>
+<li class="header">Webdriver.firefox</li><li class="chapter" data-level="7.1" data-path="../firefox/extension_connection.html">
+    <a href="../firefox/extension_connection.html"><b>7.1.</b> selenium.webdriver.firefox.extension_connection</a>
+</li>
+<li class="chapter" data-level="7.2" data-path="../firefox/firefox_binary.html">
+    <a href="../firefox/firefox_binary.html"><b>7.2.</b> selenium.webdriver.firefox.firefox_binary</a>
+</li>
+<li class="chapter" data-level="7.3" data-path="../firefox/options.html">
+    <a href="../firefox/options.html"><b>7.3.</b> selenium.webdriver.firefox.options</a>
+</li>
+<li class="chapter" data-level="7.4" data-path="../firefox/firefox_profile.html">
+    <a href="../firefox/firefox_profile.html"><b>7.4.</b> selenium.webdriver.firefox.firefox_profile</a>
+</li>
+<li class="chapter" data-level="7.5" data-path="../firefox/webdriver.html">
+    <a href="../firefox/webdriver.html"><b>7.5.</b> selenium.webdriver.firefox.webdriver</a>
+</li>
+<li class="header">Webdriver.ie</li><li class="chapter" data-level="8.1" data-path="../ie/webdriver.html">
+    <a href="../ie/webdriver.html"><b>8.1.</b> selenium.webdriver.ie.webdriver</a>
+</li>
+<li class="header">Webdriver.opera</li><li class="chapter" data-level="9.1" data-path="../opera/webdriver.html">
+    <a href="../opera/webdriver.html"><b>9.1.</b> selenium.webdriver.opera.webdriver</a>
+</li>
+<li class="header">Webdriver.phantomjs</li><li class="chapter" data-level="10.1" data-path="../phantomjs/service.html">
+    <a href="../phantomjs/service.html"><b>10.1.</b> selenium.webdriver.phantomjs.service</a>
+</li>
+<li class="chapter" data-level="10.2" data-path="../phantomjs/webdriver.html">
+    <a href="../phantomjs/webdriver.html"><b>10.2.</b> selenium.webdriver.phantomjs.webdriver</a>
+</li>
+<li class="header">Webdriver.remote</li><li class="chapter" data-level="11.1" data-path="command.html">
+    <a href="command.html"><b>11.1.</b> selenium.webdriver.remote.command</a>
+</li>
+<li class="chapter" data-level="11.2" data-path="errorhandler.html">
+    <a href="errorhandler.html"><b>11.2.</b> selenium.webdriver.remote.errorhandler</a>
+</li>
+<li class="chapter" data-level="11.3" data-path="mobile.html">
+    <a href="mobile.html"><b>11.3.</b> selenium.webdriver.remote.mobile</a>
+</li>
+<li class="chapter" data-level="11.4" data-path="remote_connection.html">
+    <a href="remote_connection.html"><b>11.4.</b> selenium.webdriver.remote.remote_connection</a>
+</li>
+<li class="chapter" data-level="11.5" data-path="utils.html">
+    <a href="utils.html"><b>11.5.</b> selenium.webdriver.remote.utils</a>
+</li>
+<li class="chapter" data-level="11.6" data-path="webdriver.html">
+    <a href="webdriver.html"><b>11.6.</b> selenium.webdriver.remote.webdriver</a>
+</li>
+<li class="chapter active" data-level="11.7" data-path="webelement.html">
+    <a href="webelement.html"><b>11.7.</b> selenium.webdriver.remote.webelement</a>
+</li>
+<li class="header">Webdriver.safari</li><li class="chapter" data-level="12.1" data-path="../safari/service.html">
+    <a href="../safari/service.html"><b>12.1.</b> selenium.webdriver.safari.service</a>
+</li>
+<li class="chapter" data-level="12.2" data-path="../safari/webdriver.html">
+    <a href="../safari/webdriver.html"><b>12.2.</b> selenium.webdriver.safari.webdriver</a>
+</li>
+
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../../../..">selenium.webdriver.remote.webelement</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>selenium.webdriver.remote.webelement</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>class selenium.webdriver.remote.webelement.WebElement(parent, id_, w3c=False)</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>1.1. </b>clear()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>1.2. </b>click()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>1.3. </b>find_element(by='id', value=None)¶</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_6'><b>1.4. </b>find_element_by_class_name(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_7'><b>1.5. </b>find_element_by_css_selector(css_selector)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_8'><b>1.6. </b>find_element_by<em>id(id</em>)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_9'><b>1.7. </b>find_element_by_link_text(link_text)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_10'><b>1.8. </b>find_element_by_name(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_11'><b>1.9. </b>find_element_by_partial_link_text(link_text)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_12'><b>1.10. </b>find_element_by_tag_name(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_13'><b>1.11. </b>find_element_by_xpath(xpath)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_14'><b>1.12. </b>find_elements(by='id', value=None)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_15'><b>1.13. </b>find_elements_by_class_name(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_16'><b>1.14. </b>find_elements_by_css_selector(css_selector)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_17'><b>1.15. </b>find_elements_by<em>id(id</em>)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_18'><b>1.16. </b>find_elements_by_link_text(link_text)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_19'><b>1.17. </b>find_elements_by_name(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_20'><b>1.18. </b>find_elements_by_partial_link_text(link_text)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_21'><b>1.19. </b>find_elements_by_tag_name(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_22'><b>1.20. </b>find_elements_by_xpath(xpath)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_23'><b>1.21. </b>get_attribute(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_24'><b>1.22. </b>get_property(name)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_25'><b>1.23. </b>id</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_26'><b>1.24. </b>is_displayed()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_27'><b>1.25. </b>is_enabled()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_28'><b>1.26. </b>is_selected()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_29'><b>1.27. </b>location</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_30'><b>1.28. </b>location_once_scrolled_into_view</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_31'><b>1.29. </b>parent</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_32'><b>1.30. </b>rect</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_33'><b>1.31. </b>screenshot(filename)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_34'><b>1.32. </b>screenshot_as_base64</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_35'><b>1.33. </b>screenshot_as_png</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_36'><b>1.34. </b>send_keys(*value)</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_37'><b>1.35. </b>size</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_38'><b>1.36. </b>submit()</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_39'><b>1.37. </b>tag_name</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_40'><b>1.38. </b>text</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_41'><b>1.39. </b>value_of_css_property(property_name)</a></li></ul></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>selenium.webdriver.remote.webelement</h1><h2 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>1. class selenium.webdriver.remote.webelement.WebElement(parent, id_, w3c=False)</h2><p>表示 DOM 元素。</p>
+<p>通常，与页面交互的所有操作都将通过此接口执行。</p>
+<p>所有方法调用都将进行新鲜度检查，以确保元素引用仍然有效。</p>
+<p>这基本上决定了元素是否仍然附加到 DOM。如果此测试失败，则 抛出 StaleElementReferenceException，并且将来对此实例的所有调用都将失败。</p>
+<h3 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. clear()</h3><p>如果文本是文本输入元素，则清除文本。</p>
+<h3 id="anchor_4"><a name="anchor_4" class="anchor-navigation-ex-anchor" href="#anchor_4"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. click()</h3><p>单击元素。</p>
+<h3 id="anchor_5"><a name="anchor_5" class="anchor-navigation-ex-anchor" href="#anchor_5"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. find_element(by='id', value=None)¶</h3><p>找到给定 By 策略和定位器的元素。尽可能优先使用 find_element<em>by</em>* 方法。</p>
+<ul>
+<li><p>用法： <code class="language-markup">element = element.find_element(By.ID, 'foo')</code></p>
+</li>
+<li><p>返回类型：WebElement</p>
+</li>
+</ul>
+<h3 id="anchor_6"><a name="anchor_6" class="anchor-navigation-ex-anchor" href="#anchor_6"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. find_element_by_class_name(name)</h3><p>查找此元素的子元素按 class name.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name: 要查找的元素的类名</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_class_name('foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_7"><a name="anchor_7" class="anchor-navigation-ex-anchor" href="#anchor_7"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. find_element_by_css_selector(css_selector)</h3><p>查找此元素的子元素按 CSS selector.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>css_selector - CSS 选择器字符串，例如：'a.nav#home'</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_css_selector('#foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_8"><a name="anchor_8" class="anchor-navigation-ex-anchor" href="#anchor_8"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. find_element_by<em>id(id</em>)</h3><p>查找此元素的子元素按 ID.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>id_ - I 要查找的子元素的 ID</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">foo_element = element.find_element_by_id('foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_9"><a name="anchor_9" class="anchor-navigation-ex-anchor" href="#anchor_9"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. find_element_by_link_text(link_text)</h3><p>查找此元素的子元素按可见 link text.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>link_text - 要搜索的链接文本字符串。</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_link_text('Sign In')</code></p>
+</li>
+</ul>
+<h3 id="anchor_10"><a name="anchor_10" class="anchor-navigation-ex-anchor" href="#anchor_10"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. find_element_by_name(name)</h3><p>查找此元素的子元素按 name.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name - 要查找的元素的 name 属性</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_name('foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_11"><a name="anchor_11" class="anchor-navigation-ex-anchor" href="#anchor_11"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. find_element_by_partial_link_text(link_text)</h3><p>查找此元素的子元素按部分可见 link text.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>link_text: 要部分匹配的元素的文本</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_partial_link_text('Sign')</code></p>
+</li>
+</ul>
+<h3 id="anchor_12"><a name="anchor_12" class="anchor-navigation-ex-anchor" href="#anchor_12"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. find_element_by_tag_name(name)</h3><p>查找此元素的子元素按 tag name.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name - html 标记的名称 (eg: h1, a, span)</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_tag_name('h1')</code></p>
+</li>
+</ul>
+<h3 id="anchor_13"><a name="anchor_13" class="anchor-navigation-ex-anchor" href="#anchor_13"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. find_element_by_xpath(xpath)</h3><p>通过 xpath 查找元素</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>xpath - 要定位的元素的 xpath。 "//input[@class='myelement']"</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote><p>注意： 基本路径将相对于此元素的位置。</p>
+</blockquote>
+<p>这将选择此元素下的第一个链接。</p>
+<pre class="line-numbers"><code class="lang-python">myelement.find_element_by_xpath(&quot;.//a&quot;)
+</code></pre>
+<p>但是，这将选择页面上的第一个链接。</p>
+<pre class="line-numbers"><code class="lang-python">myelement.find_element_by_xpath(&quot;//a&quot;)
+</code></pre>
+<ul>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement - 如果找到元素</p>
+</li>
+</ul>
+</li>
+<li><p>Raises :</p>
+<ul>
+<li><p>NoSuchElementException - 如果找不到该元素</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element = element.find_element_by_xpath('//div/td[1]')</code></p>
+</li>
+</ul>
+<h3 id="anchor_14"><a name="anchor_14" class="anchor-navigation-ex-anchor" href="#anchor_14"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. find_elements(by='id', value=None)</h3><p>查找按策略和定位器给出的元素。尽可能优先使用  <code class="language-markup">find_elements_by_*</code>  方法。</p>
+<ul>
+<li><p>用法：element =  <code class="language-markup">element.find_elements(By.CLASS_NAME, 'foo')</code></p>
+</li>
+<li><p>返回类型：WebElement 列表</p>
+</li>
+</ul>
+<h3 id="anchor_15"><a name="anchor_15" class="anchor-navigation-ex-anchor" href="#anchor_15"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. find_elements_by_class_name(name)</h3><p>查找此元素的子元素中的元素列表，通过 class name.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name: 要查找的元素的类名</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_class_name('foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_16"><a name="anchor_16" class="anchor-navigation-ex-anchor" href="#anchor_16"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. find_elements_by_css_selector(css_selector)</h3><p>查找此元素的子元素中的元素列表，通过 CSS selector.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>css_selector - CSS 选择器字符串，例如： 'a.nav#home'</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_css_selector('.foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_17"><a name="anchor_17" class="anchor-navigation-ex-anchor" href="#anchor_17"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. find_elements_by<em>id(id</em>)</h3><p>查找此元素的子元素中的元素列表，通过 ID。</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>id_ - 要查找的子元素的 ID</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_id('foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_18"><a name="anchor_18" class="anchor-navigation-ex-anchor" href="#anchor_18"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. find_elements_by_link_text(link_text)</h3><p>查找此元素的子元素中的元素列表，通过可见 link text.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>link_text - 要搜索的链接文本字符串。</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_link_text('Sign In')</code></p>
+</li>
+</ul>
+<h3 id="anchor_19"><a name="anchor_19" class="anchor-navigation-ex-anchor" href="#anchor_19"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. find_elements_by_name(name)</h3><p>按名称查找此元素的子元素中的元素列表</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name - 要搜索的 name 属性</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_name('foo')</code></p>
+</li>
+</ul>
+<h3 id="anchor_20"><a name="anchor_20" class="anchor-navigation-ex-anchor" href="#anchor_20"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. find_elements_by_partial_link_text(link_text)</h3><p>查找此元素的子元素中的元素列表，通过 partial link text.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>link_text: 要部分匹配的元素的文本</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_partial_link_text('Sign')</code></p>
+</li>
+</ul>
+<h3 id="anchor_21"><a name="anchor_21" class="anchor-navigation-ex-anchor" href="#anchor_21"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. find_elements_by_tag_name(name)</h3><p>查找此元素的子元素中的元素列表，通过 tag name.</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name - html 标记的名称 (eg: h1, a, span)</p>
+</li>
+</ul>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_tag_name('h1')</code></p>
+</li>
+</ul>
+<h3 id="anchor_22"><a name="anchor_22" class="anchor-navigation-ex-anchor" href="#anchor_22"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. find_elements_by_xpath(xpath)</h3><p>通过 xpath 查找元素中的元素列表</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>xpath - xpath 定位器字符串</p>
+</li>
+</ul>
+<blockquote><p>注意： 基本路径将相对于此元素的位置</p>
+</blockquote>
+<p>这将选择此元素下的所有链接</p>
+<pre class="line-numbers"><code class="lang-python">myelement.find_elements_by_xpath(&quot;.//a&quot;)
+</code></pre>
+<p>但是，这将选择页面本身中的所有链接。</p>
+<pre class="line-numbers"><code class="lang-python">myelement.find_elements_by_xpath(&quot;//a&quot;)
+</code></pre>
+</li>
+<li><p>返回</p>
+<ul>
+<li><p>WebElement 列表 - 包含元素的列表（如果找到）。如果没有，则为空列表</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">elements = element.find_elements_by_xpath("//div[contains(@class, 'foo')]")</code></p>
+</li>
+</ul>
+<h3 id="anchor_23"><a name="anchor_23" class="anchor-navigation-ex-anchor" href="#anchor_23"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. get_attribute(name)</h3><p>获取元素的给定属性或属性值。</p>
+<p>此方法将首先尝试返回具有给定名称的属性的值。如果不存在具有该名称的属性，则返回具有相同名称的属性的值。如果没有具有该名称的属性，则返回 None。</p>
+<p>被视为真实的值，即等于“True”或“False”，将作为布尔值返回。所有其他非 None 值将作为字符串返回。对于不存在的属性或属性， 返回 None。</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name - 要检索的属性 / 属性的名称</p>
+</li>
+</ul>
+</li>
+<li><p>举例：</p>
+<pre class="line-numbers"><code class="lang-python"># 检查 &quot;active&quot; CSS 类是否应用于元素
+
+is_active = &quot;active&quot; in target_element.get_attribute(&quot;class&quot;)
+</code></pre>
+</li>
+</ul>
+<h3 id="anchor_24"><a name="anchor_24" class="anchor-navigation-ex-anchor" href="#anchor_24"><i class="fa fa-link" aria-hidden="true"></i></a>1.22. get_property(name)</h3><p>获取元素的给定属性</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>name - 要检索的属性的名称</p>
+</li>
+</ul>
+</li>
+<li><p>举例：</p>
+<pre class="line-numbers"><code class="lang-python">text_length = target_element.get_property(&quot;text_length&quot;)
+</code></pre>
+</li>
+</ul>
+<h3 id="anchor_25"><a name="anchor_25" class="anchor-navigation-ex-anchor" href="#anchor_25"><i class="fa fa-link" aria-hidden="true"></i></a>1.23. id</h3><p>selenium 内部使用 ID</p>
+<p>这主要供内部使用。简单的用例，例如检查 2 个 webelements 是否引用相同的元素，可以使用 == 来完成：</p>
+<pre class="line-numbers"><code class="lang-python">if element1 == element2:
+  print(&quot;These 2 are equal&quot;)
+</code></pre>
+<h3 id="anchor_26"><a name="anchor_26" class="anchor-navigation-ex-anchor" href="#anchor_26"><i class="fa fa-link" aria-hidden="true"></i></a>1.24. is_displayed()</h3><p>元素是否对用户可见。</p>
+<h3 id="anchor_27"><a name="anchor_27" class="anchor-navigation-ex-anchor" href="#anchor_27"><i class="fa fa-link" aria-hidden="true"></i></a>1.25. is_enabled()</h3><p>返回元素是否已启用。</p>
+<h3 id="anchor_28"><a name="anchor_28" class="anchor-navigation-ex-anchor" href="#anchor_28"><i class="fa fa-link" aria-hidden="true"></i></a>1.26. is_selected()</h3><p>返回是否选中元素。</p>
+<p>可用于检查是否选中了复选框或单选按钮。</p>
+<h3 id="anchor_29"><a name="anchor_29" class="anchor-navigation-ex-anchor" href="#anchor_29"><i class="fa fa-link" aria-hidden="true"></i></a>1.27. location</h3><p>可渲染画布中元素的位置。</p>
+<h3 id="anchor_30"><a name="anchor_30" class="anchor-navigation-ex-anchor" href="#anchor_30"><i class="fa fa-link" aria-hidden="true"></i></a>1.28. location_once_scrolled_into_view</h3><p>这个属性可以在没有警告的情况下改变。用这个来发现屏幕上的一个元素是什么，这样我们就可以点击它。这种方法应该使元素被滚动到视图中。</p>
+<p>返回屏幕上的左上角位置，如果元素不可见，则返回 None。</p>
+<h3 id="anchor_31"><a name="anchor_31" class="anchor-navigation-ex-anchor" href="#anchor_31"><i class="fa fa-link" aria-hidden="true"></i></a>1.29. parent</h3><p>找到此元素的 WebDriver 实例的内部引用</p>
+<h3 id="anchor_32"><a name="anchor_32" class="anchor-navigation-ex-anchor" href="#anchor_32"><i class="fa fa-link" aria-hidden="true"></i></a>1.30. rect</h3><p>包含元素大小和位置的字典</p>
+<h3 id="anchor_33"><a name="anchor_33" class="anchor-navigation-ex-anchor" href="#anchor_33"><i class="fa fa-link" aria-hidden="true"></i></a>1.31. screenshot(filename)</h3><p>将当前元素的屏幕截图保存到 PNG 图像文件。</p>
+<p>如果存在任何 IOError 则返回 false，否则返回 True。在文件名中使用完整路径。</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>filename: 希望将屏幕截图保存到的完整路径。这应该以  <code class="language-markup">.png</code>  扩展名结尾。</p>
+</li>
+</ul>
+</li>
+<li><p>用法： <code class="language-markup">element.screenshot('/Screenshots/foo.png')</code></p>
+</li>
+</ul>
+<h3 id="anchor_34"><a name="anchor_34" class="anchor-navigation-ex-anchor" href="#anchor_34"><i class="fa fa-link" aria-hidden="true"></i></a>1.32. screenshot_as_base64</h3><p>获取当前元素的屏幕截图作为 base64 编码的字符串</p>
+<ul>
+<li><p>用法： <code class="language-markup">img_b64 = element.screenshot_as_base64</code></p>
+</li>
+</ul>
+<h3 id="anchor_35"><a name="anchor_35" class="anchor-navigation-ex-anchor" href="#anchor_35"><i class="fa fa-link" aria-hidden="true"></i></a>1.33. screenshot_as_png</h3><p>获取当前元素的屏幕截图作为二进制数据</p>
+<ul>
+<li><p>用法： <code class="language-markup">element_png = element.screenshot_as_png</code></p>
+</li>
+</ul>
+<h3 id="anchor_36"><a name="anchor_36" class="anchor-navigation-ex-anchor" href="#anchor_36"><i class="fa fa-link" aria-hidden="true"></i></a>1.34. send_keys(*value)</h3><p>模拟键入元素</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>value - 用于键入或设置表单字段的字符串。对于设置文件输入，这可以是本地文件路径。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>使用此命令发送简单的键事件或填写表单字段：</p>
+<pre class="line-numbers"><code class="lang-python">form_textfield = driver.find_element_by_name(&#39;username&#39;)
+form_textfield.send_keys(&quot;admin&quot;)
+</code></pre>
+<p>这也可用于设置文件输入</p>
+<pre class="line-numbers"><code class="lang-python">file_input = driver.find_element_by_name(&#39;profilePic&#39;)
+file_input.send_keys(&quot;path/to/profilepic.gif&quot;)
+
+# 通常，最好将文件路径包装在操作系统中的一个方法中。
+# 返回实际路径以支持交叉操作系统测试的路径。
+# file_input.send_keys(os.path.abspath(&quot;path/to/profilepic.gif&quot;))
+</code></pre>
+<h3 id="anchor_37"><a name="anchor_37" class="anchor-navigation-ex-anchor" href="#anchor_37"><i class="fa fa-link" aria-hidden="true"></i></a>1.35. size</h3><p>元素的大小</p>
+<h3 id="anchor_38"><a name="anchor_38" class="anchor-navigation-ex-anchor" href="#anchor_38"><i class="fa fa-link" aria-hidden="true"></i></a>1.36. submit()</h3><p>提交表单</p>
+<h3 id="anchor_39"><a name="anchor_39" class="anchor-navigation-ex-anchor" href="#anchor_39"><i class="fa fa-link" aria-hidden="true"></i></a>1.37. tag_name</h3><p>此元素的 tagName 属性</p>
+<h3 id="anchor_40"><a name="anchor_40" class="anchor-navigation-ex-anchor" href="#anchor_40"><i class="fa fa-link" aria-hidden="true"></i></a>1.38. text</h3><p>元素的文本</p>
+<h3 id="anchor_41"><a name="anchor_41" class="anchor-navigation-ex-anchor" href="#anchor_41"><i class="fa fa-link" aria-hidden="true"></i></a>1.39. value_of_css_property(property_name)</h3><p>CSS 属性的值</p>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?921ac157b25b6c9fd562a97abf2806a7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: selenium.webdriver.remote.webdriver" class="navigation navigation-prev" href="webdriver.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+<a aria-label="Next page: selenium.webdriver.safari.service" class="navigation navigation-next" href="../safari/service.html">
+    <i class="fa fa-angle-right"></i>
+</a>
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn"
+            },
+            "basePath": "../../../..",
+            "js": {'prism': ['../../../..\\../asserts/lsbook/prismjs/clipboard.min.js', '../../../..\\../asserts/lsbook/prismjs/prism.js']}
+        });
+    });
+</script>
+</div>
+
+<script src="../../../..\../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../../../..\../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../../../..\../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../../../..\../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>

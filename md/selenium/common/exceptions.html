@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Selenium API PY 文档 - selenium.common.exceptions</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../../..\../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../../..\../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../../..\../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../../..\../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../../..\../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="../webdriver/common/action_chains.html" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li><li class="chapter" data-level="1.1" data-path="../../../index.html">
+    <a href="../../../index.html"><b>1.1.</b> 介绍</a>
+</li>
+<li class="header">Common</li><li class="chapter active" data-level="2.1" data-path="exceptions.html">
+    <a href="exceptions.html"><b>2.1.</b> selenium.common.exceptions</a>
+</li>
+<li class="header">Webdriver.common</li><li class="chapter" data-level="3.1" data-path="../webdriver/common/action_chains.html">
+    <a href="../webdriver/common/action_chains.html"><b>3.1.</b> selenium.webdriver.common.action_chains</a>
+</li>
+<li class="chapter" data-level="3.2" data-path="../webdriver/common/alert.html">
+    <a href="../webdriver/common/alert.html"><b>3.2.</b> selenium.webdriver.common.alert</a>
+</li>
+<li class="chapter" data-level="3.3" data-path="../webdriver/common/by.html">
+    <a href="../webdriver/common/by.html"><b>3.3.</b> selenium.webdriver.common.by</a>
+</li>
+<li class="chapter" data-level="3.4" data-path="../webdriver/common/desired_capabilities.html">
+    <a href="../webdriver/common/desired_capabilities.html"><b>3.4.</b> selenium.webdriver.common.desired_capabilities</a>
+</li>
+<li class="chapter" data-level="3.5" data-path="../webdriver/common/keys.html">
+    <a href="../webdriver/common/keys.html"><b>3.5.</b> selenium.webdriver.common.keys</a>
+</li>
+<li class="chapter" data-level="3.6" data-path="../webdriver/common/touch_actions.html">
+    <a href="../webdriver/common/touch_actions.html"><b>3.6.</b> selenium.webdriver.common.touch_actions</a>
+</li>
+<li class="chapter" data-level="3.7" data-path="../webdriver/common/utils.html">
+    <a href="../webdriver/common/utils.html"><b>3.7.</b> selenium.webdriver.common.utils</a>
+</li>
+<li class="chapter" data-level="3.8" data-path="../webdriver/common/proxy.html">
+    <a href="../webdriver/common/proxy.html"><b>3.8.</b> selenium.webdriver.common.proxy</a>
+</li>
+<li class="chapter" data-level="3.9" data-path="../webdriver/common/service.html">
+    <a href="../webdriver/common/service.html"><b>3.9.</b> selenium.webdriver.common.service</a>
+</li>
+<li class="chapter" data-level="3.10" data-path="../webdriver/common/html5/application_cache.html">
+    <a href="../webdriver/common/html5/application_cache.html"><b>3.10.</b> selenium.webdriver.common.html5.application_cache</a>
+</li>
+<li class="header">Webdriver.support</li><li class="chapter" data-level="4.1" data-path="../webdriver/support/abstract_event_listener.html">
+    <a href="../webdriver/support/abstract_event_listener.html"><b>4.1.</b> selenium.webdriver.support.abstract_event_listener</a>
+</li>
+<li class="chapter" data-level="4.2" data-path="../webdriver/support/color.html">
+    <a href="../webdriver/support/color.html"><b>4.2.</b> selenium.webdriver.support.color</a>
+</li>
+<li class="chapter" data-level="4.3" data-path="../webdriver/support/event_firing_webdriver.html">
+    <a href="../webdriver/support/event_firing_webdriver.html"><b>4.3.</b> selenium.webdriver.support.event_firing_webdriver</a>
+</li>
+<li class="chapter" data-level="4.4" data-path="../webdriver/support/expected_conditions.html">
+    <a href="../webdriver/support/expected_conditions.html"><b>4.4.</b> selenium.webdriver.support.expected_conditions</a>
+</li>
+<li class="chapter" data-level="4.5" data-path="../webdriver/support/select.html">
+    <a href="../webdriver/support/select.html"><b>4.5.</b> selenium.webdriver.support.select</a>
+</li>
+<li class="chapter" data-level="4.6" data-path="../webdriver/support/wait.html">
+    <a href="../webdriver/support/wait.html"><b>4.6.</b> selenium.webdriver.support.wait</a>
+</li>
+<li class="header">Webdriver.android</li><li class="chapter" data-level="5.1" data-path="../webdriver/android/webdriver.html">
+    <a href="../webdriver/android/webdriver.html"><b>5.1.</b> selenium.webdriver.android.webdriver</a>
+</li>
+<li class="header">Webdriver.chrome</li><li class="chapter" data-level="6.1" data-path="../webdriver/chrome/options.html">
+    <a href="../webdriver/chrome/options.html"><b>6.1.</b> selenium.webdriver.chrome.options</a>
+</li>
+<li class="chapter" data-level="6.2" data-path="../webdriver/chrome/service.html">
+    <a href="../webdriver/chrome/service.html"><b>6.2.</b> selenium.webdriver.chrome.service</a>
+</li>
+<li class="chapter" data-level="6.3" data-path="../webdriver/chrome/webdriver.html">
+    <a href="../webdriver/chrome/webdriver.html"><b>6.3.</b> selenium.webdriver.chrome.webdriver</a>
+</li>
+<li class="header">Webdriver.firefox</li><li class="chapter" data-level="7.1" data-path="../webdriver/firefox/extension_connection.html">
+    <a href="../webdriver/firefox/extension_connection.html"><b>7.1.</b> selenium.webdriver.firefox.extension_connection</a>
+</li>
+<li class="chapter" data-level="7.2" data-path="../webdriver/firefox/firefox_binary.html">
+    <a href="../webdriver/firefox/firefox_binary.html"><b>7.2.</b> selenium.webdriver.firefox.firefox_binary</a>
+</li>
+<li class="chapter" data-level="7.3" data-path="../webdriver/firefox/options.html">
+    <a href="../webdriver/firefox/options.html"><b>7.3.</b> selenium.webdriver.firefox.options</a>
+</li>
+<li class="chapter" data-level="7.4" data-path="../webdriver/firefox/firefox_profile.html">
+    <a href="../webdriver/firefox/firefox_profile.html"><b>7.4.</b> selenium.webdriver.firefox.firefox_profile</a>
+</li>
+<li class="chapter" data-level="7.5" data-path="../webdriver/firefox/webdriver.html">
+    <a href="../webdriver/firefox/webdriver.html"><b>7.5.</b> selenium.webdriver.firefox.webdriver</a>
+</li>
+<li class="header">Webdriver.ie</li><li class="chapter" data-level="8.1" data-path="../webdriver/ie/webdriver.html">
+    <a href="../webdriver/ie/webdriver.html"><b>8.1.</b> selenium.webdriver.ie.webdriver</a>
+</li>
+<li class="header">Webdriver.opera</li><li class="chapter" data-level="9.1" data-path="../webdriver/opera/webdriver.html">
+    <a href="../webdriver/opera/webdriver.html"><b>9.1.</b> selenium.webdriver.opera.webdriver</a>
+</li>
+<li class="header">Webdriver.phantomjs</li><li class="chapter" data-level="10.1" data-path="../webdriver/phantomjs/service.html">
+    <a href="../webdriver/phantomjs/service.html"><b>10.1.</b> selenium.webdriver.phantomjs.service</a>
+</li>
+<li class="chapter" data-level="10.2" data-path="../webdriver/phantomjs/webdriver.html">
+    <a href="../webdriver/phantomjs/webdriver.html"><b>10.2.</b> selenium.webdriver.phantomjs.webdriver</a>
+</li>
+<li class="header">Webdriver.remote</li><li class="chapter" data-level="11.1" data-path="../webdriver/remote/command.html">
+    <a href="../webdriver/remote/command.html"><b>11.1.</b> selenium.webdriver.remote.command</a>
+</li>
+<li class="chapter" data-level="11.2" data-path="../webdriver/remote/errorhandler.html">
+    <a href="../webdriver/remote/errorhandler.html"><b>11.2.</b> selenium.webdriver.remote.errorhandler</a>
+</li>
+<li class="chapter" data-level="11.3" data-path="../webdriver/remote/mobile.html">
+    <a href="../webdriver/remote/mobile.html"><b>11.3.</b> selenium.webdriver.remote.mobile</a>
+</li>
+<li class="chapter" data-level="11.4" data-path="../webdriver/remote/remote_connection.html">
+    <a href="../webdriver/remote/remote_connection.html"><b>11.4.</b> selenium.webdriver.remote.remote_connection</a>
+</li>
+<li class="chapter" data-level="11.5" data-path="../webdriver/remote/utils.html">
+    <a href="../webdriver/remote/utils.html"><b>11.5.</b> selenium.webdriver.remote.utils</a>
+</li>
+<li class="chapter" data-level="11.6" data-path="../webdriver/remote/webdriver.html">
+    <a href="../webdriver/remote/webdriver.html"><b>11.6.</b> selenium.webdriver.remote.webdriver</a>
+</li>
+<li class="chapter" data-level="11.7" data-path="../webdriver/remote/webelement.html">
+    <a href="../webdriver/remote/webelement.html"><b>11.7.</b> selenium.webdriver.remote.webelement</a>
+</li>
+<li class="header">Webdriver.safari</li><li class="chapter" data-level="12.1" data-path="../webdriver/safari/service.html">
+    <a href="../webdriver/safari/service.html"><b>12.1.</b> selenium.webdriver.safari.service</a>
+</li>
+<li class="chapter" data-level="12.2" data-path="../webdriver/safari/webdriver.html">
+    <a href="../webdriver/safari/webdriver.html"><b>12.2.</b> selenium.webdriver.safari.webdriver</a>
+</li>
+
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../../..">selenium.common.exceptions</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>selenium.common.exceptions</a></li></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>selenium.common.exceptions</h1><p>在所有的 webdriver 代码中可能发生的异常。</p>
+<ul>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ElementClickInterceptedException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>元素单击命令无法完成，因为接收事件的元素会遮挡所请求的元素。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ElementNotInteractableException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当元素存在于 DOM 中，但与该元素的交互将命中另一个元素时抛出</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ElementNotSelectableException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>在尝试选择不可选择元素时引发。</p>
+<p>例如，选择一个 "script" 元素。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ElementNotVisibleException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>DOM 上存在元素，但它不可见，因此无法与之交互时引发。</p>
+<p>在尝试单击或读取隐藏在视图中的元素的文本时遇到的最常见情况。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ErrorInResponseException(response, msg)</code></p>
+<p>在服务器端发生错误时引发。</p>
+<p>当与 firefox 扩展或 remote driver server 进行通信时，可能会发生这种情况。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ImeActivationFailedException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>激活 IME 引擎失败后抛出</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ImeNotAvailableException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当 IME 支持不可用时抛出。如果计算机上没有 IME 支持，则会为每个与 IME 相关的方法调用抛出此异常。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InsecureCertificateException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>安全证书异常。命中一个证书警告，这通常是过期或无效的 TLS 证书的结果。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidArgumentException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>传递给命令的参数无效或格式错误。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidCookieDomainException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>尝试在与当前 URL 不同的域下添加 cookie 时抛出。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidCoordinatesException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>为交互操作提供的坐标无效。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidElementStateException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>由于元素处于无效状态而无法完成命令时引发。</p>
+<p>这可能是由于试图清除不可编辑和复位的元素所致。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidSelectorException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当用于查找元素的选择器未返回 WebElement 时抛出。</p>
+<p>目前这只发生在选择器是 xpath 表达式并且它在语法上无效（即它不是 xpath 表达式）或表达式没有选择 WebElements（例如： <code class="language-markup">count(//input)</code> ）时。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidSessionIdException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>如果给定的会话 ID 不在活动会话列表中，则意味着会话不存在或者它不活动。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.InvalidSwitchToTargetException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当要切换的 frame 或 window 目标不存在时抛出。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.JavascriptException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>执行用户提供的 JavaScript 时发生错误。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.MoveTargetOutOfBoundsException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当提供给 ActionsChains move() 方法的目标无效 （即超出文档） 时引发。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.NoAlertPresentException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>切换到未显示警报时抛出。</p>
+<p>当屏幕上还没有警报时，可以通过调用 Alert() 类上的操作来引起这种情况。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.NoSuchAttributeException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>无法找到元素的属性时抛出。</p>
+<p>可能需要检查该属性是否存在于正在测试的特定浏览器中。</p>
+<p>某些浏览器可能具有相同属性的不同属性名称。（IE8  <code class="language-markup">.innerText</code>  与 Firefox  <code class="language-markup">.textContent</code> ）</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.NoSuchCookieException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>在当前浏览器的 cookies 中找不到与给定路径名匹配的 cookie。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>无法找到元素时抛出。</p>
+<p>如果遇到此异常，您可能需要检查以下内容：</p>
+<ul>
+<li><p>检查 find_by... 中使用的选择器</p>
+</li>
+<li><p>在查找操作时，元素可能尚未出现在屏幕上（网页仍在加载），参阅  <code class="language-markup">selenium.webdriver.support.wait.WebDriverWait()</code>  编写等待包装器以等待元素出现</p>
+</li>
+</ul>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.NoSuchFrameException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当要切换的 frame 目标不存在时抛出。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.NoSuchWindowException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当不存在要切换的窗口目标时抛出。</p>
+<p>要查找当前活动窗口句柄集，可以按以下方式获取活动窗口句柄的列表：</p>
+<pre class="line-numbers"><code class="lang-python">print(driver.window_handles)
+</code></pre>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.RemoteDriverServerException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>远程驱动服务器异常</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.ScreenshotException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>无法截屏。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.SessionNotCreatedException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>无法创建新会话。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.StaleElementReferenceException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当对元素的引用“陈旧”时引发。</p>
+<p>陈旧意味着该元素不再出现在页面的 DOM 中。</p>
+<p><code class="language-markup">StaleElementReferenceException</code>  的可能原因包括但不限于：</p>
+<ul>
+<li><p>不再位于同一页面上，或者自找到该元素后页面可能已刷新。</p>
+</li>
+<li><p>该元素可能已被删除并重新添加到屏幕中，因为它已找到。例如重新定位的元素。当更新值并重建节点时，通常可以使用 javascript 框架进行此操作。</p>
+</li>
+<li><p>元素可能已在 iframe 或其他刷新的上下文中。</p>
+</li>
+</ul>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.TimeoutException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当命令没有在足够的时间内完成时抛出。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.UnableToSetCookieException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当驱动程序无法设置 cookie 时抛出。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.UnexpectedAlertPresentException(msg=None, screen=None, stacktrace=None, alert_text=None)</code></p>
+<p>出现意外警报时引发。</p>
+<p>通常在预期的模式阻止 webdriver 窗体执行更多命令时引发。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.UnexpectedTagNameException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>当支持类没有得到预期的 web 元素时引发。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.UnknownMethodException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>请求的命令与已知 URL 匹配，但与该 URL 的方法不匹配。</p>
+</li>
+<li><p><em>exception</em>  <code class="language-markup">selenium.common.exceptions.WebDriverException(msg=None, screen=None, stacktrace=None)</code></p>
+<p>webdriver 异常基类</p>
+</li>
+</ul>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?921ac157b25b6c9fd562a97abf2806a7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: 介绍" class="navigation navigation-prev" href="../../../index.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+<a aria-label="Next page: selenium.webdriver.common.action_chains" class="navigation navigation-next" href="../webdriver/common/action_chains.html">
+    <i class="fa fa-angle-right"></i>
+</a>
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn"
+            },
+            "basePath": "../../..",
+            "js": {'prism': ['../../..\\../asserts/lsbook/prismjs/clipboard.min.js', '../../..\\../asserts/lsbook/prismjs/prism.js']}
+        });
+    });
+</script>
+</div>
+
+<script src="../../..\../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../../..\../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../../..\../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../../..\../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>
