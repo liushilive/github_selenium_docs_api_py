@@ -180,7 +180,7 @@
 <p>基于各种关键字参数的组合和特异性，将构造一个传递给远程端的能力字典。</p>
 <p>给予此构造函数的关键字参数是帮助程序，可以更轻松地使用不同的选项自定义 Firefox WebDriver 会话。它们映射到传递到远程端的功能字典。</p>
 <p>由于某些选项（例如 firefox_profile 和  <code class="language-markup">options.profile</code>  是互斥的），因此优先级取决于设置的具体程度。 capabilities 是最不具体的关键字参数，后跟 options，后跟 firefox_binary 和 firefox_profile。</p>
-<p>实际上，这意味着如果同时设置了firefox_profile和  <code class="language-markup">options.profile</code> ，则所选的配置文件实例将始终来自最具体的变量。在这种情况下，这将是firefox_profile。这将导致  <code class="language-markup">options.profile</code> 被忽略，因为它被认为是比顶级firefox_profile 关键字参数更不具体的设置。类似地，如果你指定了一个 <code class="language-markup">["moz:firefoxOptions"]("profile")</code>  Base64字符串，这将排在 <code class="language-markup">options.profile</code> 之下。</p>
+<p>实际上，这意味着如果同时设置了 firefox_profile 和  <code class="language-markup">options.profile</code> ，则所选的配置文件实例将始终来自最具体的变量。在这种情况下，这将是 firefox_profile。这将导致  <code class="language-markup">options.profile</code> 被忽略，因为它被认为是比顶级 firefox_profile 关键字参数更不具体的设置。类似地，如果你指定了一个 <code class="language-markup">["moz:firefoxOptions"]("profile")</code>  Base64 字符串，这将排在 <code class="language-markup">options.profile</code> 之下。</p>
 <ul>
 <li><p>参数：</p>
 <ul>
