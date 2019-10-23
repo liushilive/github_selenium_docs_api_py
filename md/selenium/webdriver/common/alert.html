@@ -118,12 +118,12 @@ Alert(driver).dismiss()
 </code></pre>
 <h3 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>1.2. 在警告框提示中输入值</h3>
 <pre class="line-numbers"><code class="lang-python">name_prompt = Alert(driver)
-name_prompt.send_keys(“Willian Shakesphere”)
+name_prompt.send_keys(&quot;Willian Shakesphere&quot;)
 name_prompt.accept()
 </code></pre>
 <h3 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>1.3. 阅读提示进行验证的文本</h3>
 <pre class="line-numbers"><code class="lang-python">alert_text = Alert(driver).text
-self.assertEqual(“Do you wish to quit?”, alert_text)
+self.assertEqual(&quot;Do you wish to quit?&quot;, alert_text)
 </code></pre>
 <h3 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>1.4. Alert(driver)</h3>
 <p>创建一个新警告框对象。</p>

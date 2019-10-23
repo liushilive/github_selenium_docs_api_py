@@ -122,7 +122,7 @@
 <p>举例：</p>
 <pre class="line-numbers"><code class="lang-python">from selenium.webdriver.support.ui import Select
 
-Select(driver.find_element_by_tag_name(“select”)).select_by_index(2)
+Select(driver.find_element_by_tag_name(&quot;select&quot;)).select_by_index(2)
 </code></pre>
 <h3 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>1.1. all_selected_options</h3>
 <p>返回属于此 select 标记的所有选定选项的列表</p>
@@ -143,7 +143,7 @@ Select(driver.find_element_by_tag_name(“select”)).select_by_index(2)
 <p>throws NoSuchElementException 如果 SELECT 中没有带特定索引的选项</p>
 <h3 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>1.4. deselect_by_value(value)</h3>
 <p>取消选择具有与参数匹配的值的所有选项。</p>
-<p>也就是说，当给出“foo”时，这将取消选择如下选项：</p>
+<p>也就是说，当给出<code class="language-vim">foo</code>时，这将取消选择如下选项：</p>
 <pre class="line-numbers"><code class="lang-html">&lt;option value=&quot;foo&quot;&gt;Bar&lt;/option&gt;
 </code></pre>
 <ul>
@@ -157,7 +157,7 @@ Select(driver.find_element_by_tag_name(“select”)).select_by_index(2)
 <p>throws NoSuchElementException 如果 SELECT 中没有带有特定值的选项</p>
 <h3 id="anchor_7"><a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7"><i aria-hidden="true" class="fa fa-link"></i></a>1.5. deselect_by_visible_text(text)</h3>
 <p>取消选择显示与参数匹配的文本的所有选项。</p>
-<p>也就是说，当给出“Bar”时，这将取消选择如下选项</p>
+<p>也就是说，当给出<code class="language-vim">Bar</code>时，这将取消选择如下选项</p>
 <pre class="line-numbers"><code class="lang-html">&lt;option value=&quot;foo&quot;&gt;Bar&lt;/option&gt;
 </code></pre>
 <ul>
@@ -185,7 +185,7 @@ Select(driver.find_element_by_tag_name(“select”)).select_by_index(2)
 <p>throws NoSuchElementException 如果 SELECT 中没有带特定索引的选项</p>
 <h3 id="anchor_11"><a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11"><i aria-hidden="true" class="fa fa-link"></i></a>1.9. select_by_value(value)</h3>
 <p>选择具有与参数匹配的值的所有选项。</p>
-<p>也就是说，当给出“foo”时，这将选择如下选项：</p>
+<p>也就是说，当给出<code class="language-vim">foo</code>时，这将选择如下选项：</p>
 <pre class="line-numbers"><code class="lang-html">&lt;option value=&quot;foo&quot;&gt;Bar&lt;/option&gt;
 </code></pre>
 <ul>
@@ -199,7 +199,7 @@ Select(driver.find_element_by_tag_name(“select”)).select_by_index(2)
 <p>throws NoSuchElementException 如果 SELECT 中没有带有特定值的选项</p>
 <h3 id="anchor_12"><a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12"><i aria-hidden="true" class="fa fa-link"></i></a>1.10. select_by_visible_text(text)</h3>
 <p>选择显示与参数匹配的文本的所有选项。</p>
-<p>也就是说，当给出“Bar”时，这将选择如下选项：</p>
+<p>也就是说，当给出<code class="language-vim">Bar</code>时，这将选择如下选项：</p>
 <pre class="line-numbers"><code class="lang-html">&lt;option value=&quot;foo&quot;&gt;Bar&lt;/option&gt;
 </code></pre>
 <ul>
